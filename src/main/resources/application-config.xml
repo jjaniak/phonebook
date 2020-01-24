@@ -29,7 +29,7 @@
 
     <!--  this is beans declaration  -->
     <!-- constructor level injection -->
-    <bean name="inMemoryRepository" class="com.phonebook.spring.InMemoryRepositoryIml">
+    <bean name="inMemoryRepository" class="com.phonebook.spring.InMemoryRepositoryImpl">
         <constructor-arg ref="defaultData"/>
     </bean>
     <!-- autowiring byType -->

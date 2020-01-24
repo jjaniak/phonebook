@@ -32,7 +32,7 @@ public class ApplicationConfig {
 
     @Bean(name = "repository")
     public InMemoryRepository inMemoryRepository(Map<String, Set<String>> defaultData) {
-        return new InMemoryRepositoryIml(defaultData);
+        return new InMemoryRepositoryImpl(defaultData);
     }
 
 }

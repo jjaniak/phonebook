@@ -11,14 +11,14 @@ import java.util.Set;
  * Keeps phoneBook data in memory in ordered in accordance to addition.
  */
 @Repository
-public class InMemoryRepositoryIml implements InMemoryRepository {
+public class InMemoryRepositoryImpl implements InMemoryRepository {
 
     private Map<String, Set<String>> data;
 
     /**
      * no args constructor
      */
-    public InMemoryRepositoryIml() {
+    public InMemoryRepositoryImpl() {
         // LinkedHashMap is chosen because usually iteration order matters
         this(new LinkedHashMap<>());
     }
@@ -28,7 +28,7 @@ public class InMemoryRepositoryIml implements InMemoryRepository {
      *
      * @param data
      */
-    public InMemoryRepositoryIml(Map<String, Set<String>> data) {
+    public InMemoryRepositoryImpl(Map<String, Set<String>> data) {
         this.data = new LinkedHashMap<>(data);
     }
 
