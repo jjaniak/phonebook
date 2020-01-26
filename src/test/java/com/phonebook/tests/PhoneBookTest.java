@@ -23,7 +23,7 @@ public class PhoneBookTest {
 
     // TODO: implement a couple of tests for PhoneBook.class
     @Test
-    public void get_person_phone_numbers() {
+    public void getPersonPhoneNumber() {
         final Set<String> expected = new HashSet<>(asList("+79601232233"));
         assertEquals("phone numbers do not match",
                 expected,
