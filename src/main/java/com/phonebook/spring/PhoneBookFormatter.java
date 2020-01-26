@@ -77,7 +77,7 @@ public class PhoneBookFormatter {
     }
 
     /*************************
-     * getters required for bean properties to be injected
+     * setters required for bean properties to be injected
      *************************/
 
     /**
