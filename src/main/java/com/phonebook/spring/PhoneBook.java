@@ -47,6 +47,22 @@ public class PhoneBook {
     }
 
     /**
-     * TODO: please add required methods here
+     * add phone number for a name or create new record
+     *
+     * @param name
+     * @param phone
      */
+    public void addPhone(String name, String phone) {
+        repository.addPhone(name, phone);
+    }
+
+    /**
+     * removes a phone number from set; if set becomes empty after deletion remove record "{name:[phone]}" completely
+     *
+     * @param phone
+     * @throws IllegalArgumentException if there is no such phone in repo
+     */
+    public void removePhone(String phone) throws IllegalArgumentException {
+        repository.removePhone(phone);
+    }
 }
