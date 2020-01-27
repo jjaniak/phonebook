@@ -30,11 +30,27 @@ public class PhoneBookMain {
                 renderer.info("Have a good day...");
                 break;
             }
-            try {
-                // TODO: add your code here
-                throw new UnsupportedOperationException("Implement it!");
-            } catch (Exception e) {
-                renderer.error(e);
+            if (line.equals("SHOW")) {
+                Map<String, Set<String>> map = phoneBook.findAll();
+                renderer.show(map);
+            }
+            else if (line.startsWith("ADD")) {
+                String[] s= line.split(" ");
+                String name = s[1];
+                String[] phoneNumbers = s[2].split(",");
+                for (String number : phoneNumbers) {
+                    phoneBook.addPhone(name, number);
+                }
+            }
+            else if (line.startsWith("REMOVE_PHONE")) {
+                String[] s= line.split(" ");
+                String phoneNumber = s[1];
+
+                try {
+                    phoneBook.removePhone(phoneNumber);
+                } catch (Exception e) {
+                    renderer.error(e);
+                }
             }
         }
     }
@@ -44,5 +60,4 @@ public class PhoneBookMain {
                 ? new ClassPathXmlApplicationContext("application-config.xml")
                 : new AnnotationConfigApplicationContext(ApplicationConfig.class);
     }
-
 }
