@@ -13,7 +13,7 @@ import java.util.Set;
 @Service
 public class PhoneBook {
 
-    // @Autowired
+     @Autowired
     private InMemoryRepository repository;
 
     public PhoneBook() {
