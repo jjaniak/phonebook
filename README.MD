@@ -1,6 +1,6 @@
 This is a learning project making part of Spring course forked from [here](https://github.com/tbarabanov/phonebook)
 
-####Task description
+##### Task description
 It is required to complete PhoneBook application. Three commands have to be implemented:
 
 * ADD — add a contact
